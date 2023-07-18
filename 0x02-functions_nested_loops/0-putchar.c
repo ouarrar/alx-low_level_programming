@@ -1,9 +1,16 @@
-#include <stdio.h>
- 
-/* prints _putchar */
+#include "main.h"
+/**
+ * main - Entry point
+ * Return: Always 0 (success)
+ */
 int main () {
+   char text[8] = "_putchar";
+	int i;
 
-   printf("_putchar");
- 
-   return 0;
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(text[i]);
+	}
+	_putchar('\n');
+	return (0);
 }
