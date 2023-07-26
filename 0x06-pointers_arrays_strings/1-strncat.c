@@ -12,17 +12,21 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int lengthD, lengthS;
+	int i, lengthD, lengthS;
 
 	lengthD = 0;
 	lengthS = 0;
-
+	i = 0;
 	while (*(dest + lengthD))
 		lengthD++;
-	while ((*(dest + lengthD) = *(src + lengthS)) && lengthS < n)
+	while (*(src + lengthS))
+	lengthS++;
+	while ((*(dest + lengthD) = *(src + i)) && i < n)
 	{
 		lengthD++;
-		lengthS++;
+		i++;
 	}
+	if (i > lengthS)
+	*(dest + lengthD + i) = '\0';
 	return (dest);
 }
