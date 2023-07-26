@@ -1,8 +1,12 @@
 #include "main.h"
 /**
- * _strcat - concatenates 2 strings.
+ * _strcat - Entry point
  * @dest: string with concatenation
  * @src: string to be concatenated
+ *
+ * Description:
+ * Function that concatenates two strings.
+ *
  * Return: Pointer to the resulting string dest
  */
 char *_strcat(char *dest, char *src)
@@ -14,7 +18,7 @@ char *_strcat(char *dest, char *src)
 
 	while (*(dest + lengthD))
 		lengthD++;
-	while (*(dest + lengthD) = *(src + lengthS))
+	while ((*(dest + lengthD) = *(src + lengthS)))
 	{
 		lengthD++;
 		lengthS++;
