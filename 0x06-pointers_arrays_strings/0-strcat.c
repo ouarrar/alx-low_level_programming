@@ -12,10 +12,10 @@ char *_strcat(char *dest, char *src)
 	int lengthD, lengthS;
 
 	lengthD = _strlen(dest);
-	//lengthS=_strlen(src);
-	for(i = 0;i < lengthS;i++)
+	lengthS=_strlen(src);
+	for(int i = 0;i < lengthS;i++)
 	{
-		*(dest+lengthD+i) = *(src+i);
+		*(dest+lengthD+i+1) = *(src+i);
 	}
 	$(dest+lengthD) = "/0";
 	
