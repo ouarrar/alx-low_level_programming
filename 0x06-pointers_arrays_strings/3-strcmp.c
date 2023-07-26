@@ -1,28 +1,26 @@
 #include "main.h"
 /**
- * _strncpy - Entry point
- * @dest: Destination of copied string (destination).
- * @src: String to be copied (source).
- * @n: Number of characters from @src to be copied.
+ *_strcmp - Entry point.
+ *@s1: pointer to first string.
+ *@s2: pointer to second string.
  *
- * Description:
- * Function that copies a string from @src into @dest.
+ *Description:
+ *compares two strings.
  *
- * Return: Pointer to the destination address.
+ *Return: value less than 0 if string is less than the other.
+ *value greater than 0 if string is greater than the other.
+ *0 if strings are equal.
  */
-char *_strncpy(char *dest, char *src, int n)
+int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int counter, cmp;
 
-	while (i < n && *(src + i))
+	counter = 0;
+	while (*(s1 + counter) == *(s2 + counter) && *(s1 + counter) != '\0')
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		counter++;
 	}
-	while (i < n)
-	{
-		*(dest + index) = '\0';
-		i++;
-	}
-	return (dest);
+
+	cmp = *(s1 + counter) - *(s2 + counter);
+	return (cmp);
 }
