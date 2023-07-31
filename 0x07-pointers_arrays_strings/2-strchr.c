@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strchr - Entry point
  * @s: string
@@ -12,8 +13,10 @@ char *_strchr(char *s, char c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
+		{
 			return (&s[i]);
-		i++;
+		}
+			i++;
 	}
-	return (0);
+	return (NULL);
 }
