@@ -13,7 +13,7 @@ int checkSquare(int a, int b)
 		return (a);
 	if (a * a > b)
 		return (-1);
-	return (check(a + 1, b));
+	return (checkSquare(a + 1, b));
 }
 
 /**
