@@ -25,5 +25,5 @@ int checker_pal(char *s, int i, int j)
  */
 int is_palindrome(char *s)
 {
-	return (checker_paly(s, 0, _strlen_recursion(s) - 1));
+	return (checker_pal(s, 0, _strlen_recursion(s) - 1));
 }
