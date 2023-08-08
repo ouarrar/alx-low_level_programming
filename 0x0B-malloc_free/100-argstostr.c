@@ -11,7 +11,6 @@ char *argstostr(int ac, char **av)
 {
 	int total_length;
 	int i;
-	char *concatenated;
 	char *arg;
 	int current_position;
 
@@ -19,7 +18,6 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	total_length = 0;
-
 	for (i = 0; i < ac; i++)
 	{
 		arg = av[i];
@@ -31,9 +29,7 @@ char *argstostr(int ac, char **av)
 		total_length++;
 	}
 
-	concatenated = (char *)sbrk(total_length);
-	if (concatenated == (char *)-1)
-		return (NULL);
+	char concatenated[total_length];
 
 	current_position = 0;
 	for (i = 0; i < ac; i++)
