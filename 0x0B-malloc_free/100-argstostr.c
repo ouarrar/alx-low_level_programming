@@ -1,51 +1,49 @@
 #include "main.h"
-#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * argstostr - Concatenates all the arguments of the program.
- * @ac: The argument count.
- * @av: The argument vector.
+ * argstostr - concatenates all the arguments of your program.
+ * @ac: arguments count
+ * @av: arguments vector
  *
- * Return: A pointer to a new concatenated string, or NULL on failure.
+ * Return: a pointer to a new string, or NULL if it fails
  */
 char *argstostr(int ac, char **av)
 {
-	int total_length;
-	int i;
-	char *arg;
-	int current_position;
-	char *concatenated;
+	char *str, *s;
+	int i, j, k, len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	total_length = 0;
 	for (i = 0; i < ac; i++)
 	{
-		arg = av[i];
-		while (*arg != '\0')
-		{
-			total_length++;
-			arg++;
-		}
-		total_length++;
+		s = av[i];
+		j = 0;
+
+		while (s[j++])
+			len++;
+		len++;
 	}
 
-	concatenated = (char *)malloc((total_length + 1) * sizeof(char));
-	if (concatenated == NULL)
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 		return (NULL);
 
-	current_position = 0;
-	for (i = 0; i < ac; i++)
+	for (i = 0, j = 0; i < ac && j < len; i++)
 	{
-		arg = av[i];
-		while (*arg != '\0')
+		s = av[i];
+		k = 0;
+
+		while (s[k])
 		{
-			concatenated[current_position] = *arg;
-			current_position++;
-			arg++;
+			str[j] = s[k];
+			k++;
+			j++;
 		}
-		concatenated[current_position] = '\n';
-		current_position++;
+		str[j++] = '\n';
 	}
-	return (concatenated);
+	str[j] = '\0';
+
+	return (str);
 }
