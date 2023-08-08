@@ -17,14 +17,14 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	size_t len1;
+	unsigned int len1;
 
 	len1 = 0;
 
 	while (s1[len1] != '\0')
 		len1++;
 
-	size_t len2;
+	unsigned int len2;
 
 	len2 = 0;
 
