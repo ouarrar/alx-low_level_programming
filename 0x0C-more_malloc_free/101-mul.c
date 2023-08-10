@@ -31,7 +31,7 @@ int is_positive_number(const char *str)
 unsigned long long _strtoull(const char *str)
 {
 	unsigned long long result;
-	
+
 	result = 0;
 
 	while (*str)
