@@ -12,45 +12,45 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    char *result;
-    unsigned int len1;
-    unsigned int len2;
-    unsigned int result_len;
-    unsigned int i;
-    unsigned int j;
+	char *result;
+	unsigned int len1;
+	unsigned int len2;
+	unsigned int result_len;
+	unsigned int i;
+	unsigned int j;
 
-    len1 = 0;
-    len2 = 0;
-    // Handle NULL strings as empty strings
-    if (s1 == NULL)
-        s1 = "";
-    if (s2 == NULL)
-        s2 = "";
+	len1 = 0;
+	len2 = 0;
+	// Handle NULL strings as empty strings
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-    len1 = _strlen(s1);
-    len2 = _strlen(s2);
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
 
-    if (n >= len2)
-        n = len2;
+	if (n >= len2)
+		n = len2;
 
-    result_len = len1 + n;
+	result_len = len1 + n;
 
-    result = malloc((result_len + 1) * sizeof(char));
+	result = malloc((result_len + 1) * sizeof(char));
 
-    if (result == NULL)
-        return (NULL);
+	if (result == NULL)
+		return (NULL);
 
-    for (i = 0; i < len1; i++)
-    {
-        result[i] = s1[i];
-    }
+	for (i = 0; i < len1; i++)
+	{
+		result[i] = s1[i];
+	}
 
-    for (j = 0; j < n; j++, i++)
-    {
-        result[i] = s2[j];
-    }
+	for (j = 0; j < n; j++, i++)
+	{
+		result[i] = s2[j];
+	}
 
-    result[result_len] = '\0';
+	result[result_len] = '\0';
 
-    return (result);
+	return (result);
 }
