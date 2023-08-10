@@ -13,7 +13,7 @@ int is_positive_number(const char *str)
 {
 	while (*str)
 	{
-		if (!isdigit(*str))
+		if (!_isdigit(*str))
 		{
 			return (0);
 		}
@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	num1 = _strtoull(argv[1], NULL, 10);
-	num2 = _strtoull(argv[2], NULL, 10);
+	num1 = _strtoull(argv[1]);
+	num2 = _strtoull(argv[2]);
 
 	result = num1 * num2;
 
