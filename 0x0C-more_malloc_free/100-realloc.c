@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
 #include "memcpy.c"
+#include <stdlib.h>
 
 /**
  * _realloc - Reallocates a memory block.
@@ -41,9 +41,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	if (old_size < new_size)
-		size = old_size
+		size = old_size;
 	else
-		size = new_size
+		size = new_size;
 
 	_memcpy(new_ptr, ptr, size);
 
