@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include "isdigit.c"
 
+/**
+ * is_positive_number - Checks if a string is a positive number.
+ * @str: The string to check.
+ *
+ * Return: 1 if the string is a positive number, 0 otherwise.
+ */
 int is_positive_number(const char *str)
 {
 	while (*str)
@@ -16,6 +22,13 @@ int is_positive_number(const char *str)
 	return (1);
 }
 
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of command-line argument strings.
+ *
+ * Return: 0 on success, 98 on error (invalid arguments or non-numeric input).
+ */
 int main(int argc, char *argv[])
 {
 	unsigned long long num1, num2, result;
