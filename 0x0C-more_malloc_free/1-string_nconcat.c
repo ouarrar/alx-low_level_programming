@@ -21,7 +21,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	len1 = 0;
 	len2 = 0;
-	// Handle NULL strings as empty strings
+	
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
