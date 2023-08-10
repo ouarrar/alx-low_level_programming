@@ -23,14 +23,14 @@ int is_positive_number(const char *str)
 }
 
 /**
- * _strtoull - Converts a string to an unsigned long long.
+ * _strtoull - Converts a string to an unsigned long.
  * @str: The string to convert.
  *
  * Return: The converted value if successful, 0 on error (invalid input).
  */
-unsigned long long _strtoull(const char *str)
+unsigned long _strtoull(const char *str)
 {
-	unsigned long long result;
+	unsigned long result;
 
 	result = 0;
 
@@ -57,7 +57,7 @@ unsigned long long _strtoull(const char *str)
  */
 int main(int argc, char *argv[])
 {
-	unsigned long long num1, num2, result;
+	unsigned long num1, num2, result;
 
 	if (argc != 3)
 	{
