@@ -23,6 +23,32 @@ int is_positive_number(const char *str)
 }
 
 /**
+ * _strtoull - Converts a string to an unsigned long long.
+ * @str: The string to convert.
+ *
+ * Return: The converted value if successful, 0 on error (invalid input).
+ */
+unsigned long long _strtoull(const char *str)
+{
+    unsigned long long result;
+	
+	result = 0;
+
+    while (*str)
+	{
+        if (!_isdigit(*str))
+		{
+            return (0);
+        }
+        result = result * 10 + (*str - '0');
+        str++;
+    }
+
+    return (result);
+}
+
+
+/**
  * main - Entry point of the program.
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line argument strings.
@@ -45,8 +71,8 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 
-	num1 = strtoull(argv[1], NULL, 10);
-	num2 = strtoull(argv[2], NULL, 10);
+	num1 = _strtoull(argv[1], NULL, 10);
+	num2 = _strtoull(argv[2], NULL, 10);
 
 	result = num1 * num2;
 
