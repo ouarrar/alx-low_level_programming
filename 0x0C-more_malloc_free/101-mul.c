@@ -30,21 +30,21 @@ int is_positive_number(const char *str)
  */
 unsigned long long _strtoull(const char *str)
 {
-    unsigned long long result;
+	unsigned long long result;
 	
 	result = 0;
 
-    while (*str)
+	while (*str)
 	{
-        if (!_isdigit(*str))
+		if (!_isdigit(*str))
 		{
-            return (0);
-        }
-        result = result * 10 + (*str - '0');
-        str++;
-    }
+			return (0);
+		}
+		result = result * 10 + (*str - '0');
+		str++;
+	}
 
-    return (result);
+	return (result);
 }
 
 
