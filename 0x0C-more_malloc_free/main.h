@@ -11,4 +11,5 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int _isdigit(int c);
 int is_positive_number(const char *str);
 void errors(void);
+int _putchar(char c);
 #endif
