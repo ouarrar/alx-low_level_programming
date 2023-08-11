@@ -5,6 +5,15 @@
 #include "strlen.c"
 
 /**
+ * errors - handles errors for main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+
+/**
  * main - Entry point of the program.
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line argument strings.
@@ -18,11 +27,7 @@ int main(int argc, char *argv[])
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !_is_digit(s1) || !_is_digit(s2))
-	{
-	printf("Error\n");
-	exit(98);
-	}
-	
+		errors();
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
