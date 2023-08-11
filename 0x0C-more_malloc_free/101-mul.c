@@ -16,10 +16,8 @@ int is_positive_number(const char *str)
 {
 	while (*str)
 	{
-		if (!_isdigit(*str))
-		{
+		if ('0' > str || str > '9')
 			return (0);
-		}
 		str++;
 	}
 	return (1);
