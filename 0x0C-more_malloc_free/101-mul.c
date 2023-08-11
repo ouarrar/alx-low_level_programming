@@ -1,28 +1,42 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include "isdigit.c"
-#include "strlen.c"
-#include "putchar.c"
-
+#include <stdio.h>
+#include "main.h"
 
 /**
- * is_positive_number - Checks if a string is a positive number.
- * @str: The string to check.
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
  *
- * Return: 1 if the string is a positive number, 0 otherwise.
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
-int is_positive_number(const char *str)
+int is_digit(char *s)
 {
-	while (*str)
+	int i = 0;
+
+	while (s[i])
 	{
-		if ('0' > *str || *str > '9')
+		if (s[i] < '0' || s[i] > '9')
 			return (0);
-		str++;
+		i++;
 	}
 	return (1);
 }
 
+/**
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 /**
  * errors - handles errors for main
@@ -34,11 +48,11 @@ void errors(void)
 }
 
 /**
- * main - Entry point of the program.
- * @argc: The number of command-line arguments.
- * @argv: An array of command-line argument strings.
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: 0 on success, 98 on error (invalid arguments or non-numeric input).
+ * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -46,7 +60,7 @@ int main(int argc, char *argv[])
 	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !is_positive_number(s1) || !is_positive_number(s2))
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
