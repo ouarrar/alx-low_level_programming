@@ -2,19 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 /**
  * is_digit - checks if a string contains a non-digit char
  * @s: string to be evaluated
@@ -102,11 +89,11 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			_putchar(result[i] + '0');
+			printf(result[i] + '0');
 	}
 	if (!a)
-		_putchar('0');
-	_putchar('\n');
+		printf('0');
+	printf('\n');
 	free(result);
 	return (0);
 }
