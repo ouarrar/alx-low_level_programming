@@ -5,6 +5,27 @@
 #include "strlen.c"
 #include "putchar.c"
 
+
+/**
+ * is_positive_number - Checks if a string is a positive number.
+ * @str: The string to check.
+ *
+ * Return: 1 if the string is a positive number, 0 otherwise.
+ */
+int is_positive_number(const char *str)
+{
+	while (*str)
+	{
+		if (!_isdigit(*str))
+		{
+			return (0);
+		}
+		str++;
+	}
+	return (1);
+}
+
+
 /**
  * errors - handles errors for main
  */
@@ -27,7 +48,7 @@ int main(int argc, char *argv[])
 	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
-	if (argc != 3 || !_isdigit(s1) || !_isdigit(s2))
+	if (argc != 3 || !is_positive_number(s1) || !is_positive_number(s2))
 		errors();
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
