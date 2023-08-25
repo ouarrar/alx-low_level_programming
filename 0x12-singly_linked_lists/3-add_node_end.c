@@ -14,7 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;      /* Declare a pointer for the new node*/
 	list_t *current = *head; /* Declare a pointer to traverse the list*/
-	unsigned int length = 0; /* Initialize a variable to store the length of 'str'*/
+	unsigned int length = 0; /*Initializ a variable to store the length of 'str'*/
 
 	/* Calculate the length of the input string 'str'*/
 	while (str[length])
