@@ -10,7 +10,7 @@
  * first node is at index 0, the second at index 1, and so on.
  *
  * Return: If the index is out of range or if the list is empty,
- * it returns NULL. Otherwise, it returns a pointer to the node 
+ * it returns NULL. Otherwise, it returns a pointer to the node
  * at the specified index.
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
