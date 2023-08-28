@@ -5,8 +5,8 @@
  * @head: A pointer to a pointer to the head of the list.
  * @n: The integer value to be stored in the new node.
  *
- * Description: This function creates a new node with the given integer value (@n)
- *              and adds it to the beginning of the linked list pointed to by @head.
+ * Description: This function creates a new node with the given integer value
+ * (@n) and adds it to the beginning of the linked list pointed to by @head.
  *
  * Return: If the function succeeds, it returns a pointer to the newly created node.
  *         If memory allocation fails or if @head is NULL, it returns NULL.
