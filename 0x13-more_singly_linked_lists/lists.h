@@ -12,10 +12,7 @@
  * Description: This structure defines the individual nodes of a singly-linked
  *              list of integers. Each node contains an integer value (@n) and
  *              a pointer to the next node in the list (@next).
- *
- * Author: Abdelouahed OUARRAR
  */
- 
 typedef struct listint_s
 {
 	int n;
