@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * flip_bits - Count the number of bits that need 
+ * flip_bits - Count the number of bits that need
  * to be flipped to transform one number into another.
  * @n: The first unsigned long integer.
  * @m: The second unsigned long integer.
