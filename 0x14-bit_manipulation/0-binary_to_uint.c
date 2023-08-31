@@ -1,31 +1,39 @@
 #include "main.h"
 #include <stdio.h>
-#include <stddef.h>
-/**
- * binary_to_uint - Converts a binary number to an unsigned int.
- * @b: A pointer to a string containing binary digits.
+
+/*
+ * binary_to_uint - Converts a binary string to an unsigned integer.
+ * @b: A pointer to the binary string.
  *
- * Return: The converted number, or 0 if there are invalid
- * characters or if b is NULL.
+ * Return: The converted unsigned integer, or 0 if b is NULL or contains
+ *         characters other than '0' or '1'.
  */
 unsigned int binary_to_uint(const char *b)
 {
-	if (b == NULL)
-		return (0);
-
+	/* Store the final result */
 	unsigned int result = 0;
-	int power = 0;
 
-	while (*b != '\0')
+	/* Represents the base (power of 2) */
+	unsigned int base = 1;
+
+	/* Store the length of the binary string */
+	int length = 0;
+
+	if (b == NULL)
+		return (0); /* Return 0 if the input string is NULL */
+
+	/* Calculate the length of the binary string */
+	for (length = 0; b[length]; length++)
 	{
-		if (*b != '0' && *b != '1')
-		{
-			return (0); /*Invalid character found*/
-		}
+		if (b[length] != '0' && b[length] != '1')
+			return (0); /* Return 0 if there's a non-binary character */
+	}
 
-		result = (result << 1) | (*b - '0'); /*Shift left and add the binary digit*/
-		b++;
-		power++;
+	/* Convert the binary string to an unsigned integer */
+	for (base = 1, result = 0, length--; length >= 0; length--, base *= 2)
+	{
+		if (b[length] == '1')
+			result += base; /* Add the appropriate power of 2 to the result */
 	}
 
 	return (result);
