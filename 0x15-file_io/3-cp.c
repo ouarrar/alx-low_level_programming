@@ -31,7 +31,8 @@ char *create_buffer(char *file)
  * close_file - Close a file descriptor.
  * @fd: The file descriptor to close.
  *
- * This function closes the specified file descriptor 'fd'. If the closing operation
+ * This function closes the specified file descriptor 'fd'.
+ * If the closing operation
  * fails, it prints an error message to stderr and exits with an error code.
  */
 void close_file(int fd)
@@ -52,9 +53,7 @@ void close_file(int fd)
  * @argc: The number of command-line arguments.
  * @argv: An array of command-line argument strings.
  *
- * This program copies the content of the file specified by 'argv[1]' to the file specified
- * by 'argv[2]'. If the number of command-line arguments is not 3, it prints an error message
- * and exits with an error code. It uses a buffer to read and write the content of the files.
+ * Return: 0 on success or an error code.
  */
 int main(int argc, char *argv[])
 {
