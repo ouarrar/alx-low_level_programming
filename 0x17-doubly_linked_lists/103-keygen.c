@@ -32,7 +32,7 @@ int finds_biggest(char *username, int len)
 }
 
 /**
- * square_chars_username - Computes an integer result by squaring each character
+ * square_chars_username- Computes an integer result by squaring each character
  * of a username string.
  *
  * @username: username
